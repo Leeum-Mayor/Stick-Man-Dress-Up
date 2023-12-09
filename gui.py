@@ -12,6 +12,10 @@ from PyQt6.QtGui import QPixmap
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
+        """
+        Loads UI
+        :param MainWindow: Main window
+        """
         MainWindow.setObjectName("Stick-man Dress-Up")
         MainWindow.setFixedSize(1100, 800)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
@@ -469,6 +473,10 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
+        """
+        Sets text for buttons and window
+        :param MainWindow: Main window
+        """
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.outfit1Button.setText(_translate("MainWindow", "SAVE OUTFIT 1"))
