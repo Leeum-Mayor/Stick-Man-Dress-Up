@@ -4,7 +4,7 @@ from gui import *
 
 class Stickman(QMainWindow, Ui_MainWindow):
     """
-    Handles the logic for a stickman object
+    Handles the logic for a stick-man object
     """
     GROUPS = ['hat', 'top', 'pants', 'shoe']
 
@@ -93,7 +93,6 @@ class Stickman(QMainWindow, Ui_MainWindow):
         lines = input_file.readlines()
         input_file.close()
         full_outfit = lines[outfit - 1].split()
-        print(full_outfit)
         for group in self.GROUPS:
             pixmap_name = getattr(self, f'{group}Wearing')
             if group == 'hat' and full_outfit[0] != '-1':
@@ -158,7 +157,6 @@ class Stickman(QMainWindow, Ui_MainWindow):
             outfit_delete = getattr(self, f'outfit{i}Delete')
 
             if len(lines[i - 1]) > 2:
-                print(lines[i - 1])
                 outfit_button.hide()
                 outfit_button.setEnabled(False)
             else:
